@@ -11,10 +11,10 @@ let Welcome = () => {
           </div>
           <div className="card-body">
             <h5 className="card-title">
-              This is a MERN Stack application to see adds
+              This is a MERN Stack application to see ads.
             </h5>
             <p className="card-text">
-              To see adds please search some keywords in the search bar!
+              To see ads please search some keywords in the search bar!
             </p>
           </div>
         </div>

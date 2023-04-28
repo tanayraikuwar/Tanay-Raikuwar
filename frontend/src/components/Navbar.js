@@ -6,7 +6,7 @@ let Navbar = (props) => {
   let [searchParams, setSearchParams] = useState("");
 
   let fetchData = () => {
-    fetch(`http://localhost:3000/data/${searchParams}`)
+    fetch(`http://localhost:3001/data/${searchParams}`)
       .then((response) => {
         return response.json();
       })
