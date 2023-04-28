@@ -1,10 +1,12 @@
 const express = require("express");
-const routes = require("./src/app");
+const routes = require("./src/routes");
 const app = express();
 const mongoose = require("mongoose");
 const port = 3000;
+let cors = require("cors");
 
 // Parse JSON bodies (as sent by API clients)
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -26,4 +28,3 @@ db.once("open", () => console.log("connected to database"));
 let server = app.listen(port, () =>
   console.log(`App listening on port ${port}!`)
 );
-module.exports = server;

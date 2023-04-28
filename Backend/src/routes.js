@@ -1,6 +1,5 @@
 const express = require("express");
 const adsSchema = require("./models/ads");
-// const companies = require("./models/companies");
 const router = express.Router();
 
 router.route("/data/:searchData").get(async (req, res) => {
@@ -21,10 +20,10 @@ router.route("/data/:searchData").get(async (req, res) => {
       {
         $match: {
           $or: [
-            { "companyName.name": { $regex: `${searchData}` } },
-            { primaryText: { $regex: `${searchData}` } },
-            { headline: { $regex: `${searchData}` } },
-            { description: { $regex: `${searchData}` } },
+            { "companyName.name": { $regex: `${searchData}`, $options: "i" } },
+            { primaryText: { $regex: `${searchData}`, $options: "i" } },
+            { headline: { $regex: `${searchData}`, $options: "i" } },
+            { description: { $regex: `${searchData}`, $options: "i" } },
           ],
         },
       },

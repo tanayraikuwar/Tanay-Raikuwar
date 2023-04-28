@@ -1,0 +1,10 @@
+.grid-container {
+  display: grid;
+  width: 80vw;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  row-gap: 50px;
+  column-gap: 50px;
+  align-items: center;
+  justify-items: center;
+}
