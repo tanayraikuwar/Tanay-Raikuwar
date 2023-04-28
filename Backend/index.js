@@ -2,7 +2,7 @@ const express = require("express");
 const routes = require("./src/routes");
 const app = express();
 const mongoose = require("mongoose");
-const port = 3000;
+const port = 3001;
 let cors = require("cors");
 
 // Parse JSON bodies (as sent by API clients)
